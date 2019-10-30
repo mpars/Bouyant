@@ -1,0 +1,23 @@
+{
+  "Mac" : [
+    {
+      "name" : "Highlightr",
+      "hash" : "b01ecbfaa469de90019cf6bdd19577e47534f34f7b21a33aad06db6f38c6b3be",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "2.1.1",
+  "iOS" : [
+    {
+      "name" : "Highlightr",
+      "hash" : "cae5cbcb7277638f8a7efb84d94fc3f5708644824c347b134dede04c0f7851f2",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}
