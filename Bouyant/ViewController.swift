@@ -227,6 +227,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
     
     func checkModeLightDark() {
         
+        // if in dark mode, make sure theme is correct
         if inDarkMode {
             //view.window?.backgroundColor = NSColor(white: 0.2, alpha: 0.5)
             if windowIsTransparent == true {
@@ -236,13 +237,17 @@ class ViewController: NSViewController, NSTextViewDelegate {
                 //self.textView.backgroundColor = NSColor(white: 0.2, alpha: 1)
                 view.window?.alphaValue = 1
             }
-            // dont need this now
-            //view.window?.alphaValue = 0.7
-            //self.textView.alphaValue = 0.8
+
             if let storage = highlightrTextStorage {
+                if languagesPopUpButton.titleOfSelectedItem! == "plaintext" {
+                    storage.highlightr.setTheme(to: "vs2015")
+                    storage.highlightr.theme.codeFont = NSFont(name: "monaco", size: 12)
+                }else{
                 storage.highlightr.setTheme(to: "tomorrow-night-eighties")
                 storage.highlightr.theme.codeFont = NSFont(name: "monaco", size: 12)
+                }
             }
+            
         } else {
             
             //view.window?.backgroundColor = NSColor(white: 1, alpha: 0.5)
@@ -254,16 +259,20 @@ class ViewController: NSViewController, NSTextViewDelegate {
                 //self.textView.backgroundColor = NSColor(white: 1, alpha: 1)
             }
             
-            // dont need this either
-            
-            //view.window?.alphaValue = 0.7
-            //self.textView.alphaValue = 0.8
+
             if let storage = highlightrTextStorage {
+                if languagesPopUpButton.titleOfSelectedItem! == "plaintext" {
+                    storage.highlightr.setTheme(to: "xcode")
+                    storage.highlightr.theme.codeFont = NSFont(name: "monaco", size: 12)
+                }else{
                 storage.highlightr.setTheme(to: "tomorrow")
                 storage.highlightr.theme.codeFont = NSFont(name: "monaco", size: 12)
+                }
             }
         }
     }
+        
+    
     
     
     @IBAction func languagesPopUpButtonAction(_ sender: NSPopUpButton) {
