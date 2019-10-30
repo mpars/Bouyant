@@ -7,5 +7,5 @@ todo:
 
 - finish preferences
 - save window size and position
-- strip dropped and pasted text formatting
+~~- strip dropped and pasted text formatting~~
 - fix open recent in sandbox
